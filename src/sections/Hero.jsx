@@ -23,7 +23,12 @@ export default function Hero() {
         {/* Right */}
         <div className="ti-hero-right">
           <div className="ti-cta-card ti-cta-card-lg">
-            <a className="ti-btn ti-btn-lg ti-btn-wide" href="#waitlist">
+            <a
+              className="ti-btn ti-btn-lg ti-btn-wide"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfwWjl5_LCPeFYaya4QNdS0N7gkuExyhsqCBiHba2YVhs767w/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Join the waitlist
             </a>
 

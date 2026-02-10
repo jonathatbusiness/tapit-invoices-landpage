@@ -10,7 +10,17 @@ export default function FinalCTA() {
           hanging.
         </p>
 
-        <form className="ti-final-form" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="ti-final-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            window.open(
+              "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tgwfYNUMUg4TkdaVE85MDUzQ0M2QjJEOE9aMTJKUi4u",
+              "_blank",
+              "noopener,noreferrer",
+            );
+          }}
+        >
           <label className="ti-field">
             <span className="ti-field-icon">
               <FiMail />

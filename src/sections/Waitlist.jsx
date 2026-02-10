@@ -9,7 +9,17 @@ export default function Waitlist() {
           Drop your email. We’ll ping you when it’s ready. (No weird stuff.)
         </p>
 
-        <form className="ti-form" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="ti-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            window.open(
+              "https://docs.google.com/forms/d/e/1FAIpQLSfwWjl5_LCPeFYaya4QNdS0N7gkuExyhsqCBiHba2YVhs767w/viewform?usp=publish-editor",
+              "_blank",
+              "noopener,noreferrer",
+            );
+          }}
+        >
           <label className="ti-field">
             <span className="ti-field-icon">
               <FiMail />
