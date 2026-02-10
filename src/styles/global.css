@@ -1,0 +1,215 @@
+:root {
+  /* Core */
+  --ink: #0b1220;
+  --muted: #334155;
+  --card: #ffffff;
+
+  /* Gen Z / good vibes */
+  --brand: #60a5fa; /* sky */
+  --brand2: #a78bfa; /* violet */
+  --brand3: #34d399; /* mint */
+  --brand4: #fb7185; /* pink */
+  --brand5: #fbbf24; /* sun */
+
+  /* Bands */
+  --bg-hero: #f7fbff;
+  --bg-carousel: #f3f0ff;
+  --bg-features: #ecfdf5;
+  --bg-pricing: #fff7ed;
+  --bg-waitlist: #eff6ff;
+  --bg-final: #0b1220;
+
+  /* Shadow */
+  --shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial;
+  color: var(--ink);
+  background: var(--bg-hero);
+}
+
+a {
+  color: inherit;
+}
+
+/* TapIT Carousel */
+.ti-carousel {
+  width: min(680px, 92vw);
+  margin: 0 auto;
+}
+
+.ti-swiper {
+  width: 100%;
+  padding-bottom: 44px;
+  overflow: visible;
+}
+
+.ti-slide {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+  transform: translateZ(0); /* evita artefatos */
+}
+
+.ti-swiper .swiper-slide,
+.ti-swiper .swiper-slide-shadow,
+.ti-swiper .swiper-slide-shadow-left,
+.ti-swiper .swiper-slide-shadow-right {
+  border-radius: 18px !important;
+}
+
+.ti-swiper .swiper-slide {
+  overflow: hidden !important;
+  background: transparent;
+}
+
+.ti-swiper .swiper-slide > * {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.ti-slide-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Handwriting-ish (fallbacks) */
+.ti-hand {
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-weight: 700;
+}
+
+/* Bands */
+.ti-band {
+  position: relative;
+}
+
+.ti-band-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 64px 0 88px;
+  background:
+    radial-gradient(
+      900px 600px at 15% 20%,
+      rgba(96, 165, 250, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 85% 70%,
+      rgba(167, 139, 250, 0.22),
+      transparent 60%
+    ),
+    var(--bg-hero);
+}
+
+.ti-band-carousel {
+  padding: 56px 0;
+  background:
+    radial-gradient(
+      700px 450px at 50% 20%,
+      rgba(167, 139, 250, 0.18),
+      transparent 60%
+    ),
+    var(--bg-carousel);
+}
+
+.ti-band-features {
+  padding: 64px 0;
+  background:
+    radial-gradient(
+      700px 450px at 15% 30%,
+      rgba(52, 211, 153, 0.18),
+      transparent 60%
+    ),
+    var(--bg-features);
+}
+
+.ti-band-pricing {
+  padding: 72px 0;
+  background:
+    radial-gradient(
+      700px 450px at 80% 30%,
+      rgba(251, 191, 36, 0.22),
+      transparent 60%
+    ),
+    var(--bg-pricing);
+}
+
+.ti-band-final {
+  padding: 72px 0;
+  background:
+    radial-gradient(
+      800px 520px at 20% 20%,
+      rgba(96, 165, 250, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 520px at 80% 60%,
+      rgba(251, 113, 133, 0.16),
+      transparent 60%
+    ),
+    var(--bg-final);
+  color: #ffffff;
+}
+
+.ti-band-final .ti-sub,
+.ti-band-final .ti-mini-muted {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Full-height sections (good vibes + breathing room) */
+.ti-band-carousel,
+.ti-band-features,
+.ti-band-pricing,
+.ti-band-final {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Swiper pagination visibility */
+.ti-swiper .swiper-pagination {
+  bottom: -30px !important;
+}
+
+.ti-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.35;
+}
+
+.ti-swiper .swiper-pagination-bullet-active {
+  opacity: 0.9;
+}
+
+.ti-band-carousel {
+  position: relative;
+}
+
+.ti-band-carousel .ti-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.ti-carousel {
+  position: relative;
+  z-index: 1;
+}
