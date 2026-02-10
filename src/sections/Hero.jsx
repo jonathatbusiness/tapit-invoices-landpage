@@ -1,4 +1,5 @@
 import { FiArrowDown } from "react-icons/fi";
+const logo = "/assets/logo.png";
 
 export default function Hero() {
   return (
@@ -6,6 +7,8 @@ export default function Hero() {
       <div className="ti-wrap ti-hero-grid">
         {/* Left */}
         <div className="ti-hero-left">
+          <img src={logo} alt="TapIT Invoices logo" className="ti-hero-logo" />
+
           <p className="ti-kicker">Fast. Local. No BS.</p>
 
           <h1 className="ti-h1">Invoices. Done before you overthink them.</h1>

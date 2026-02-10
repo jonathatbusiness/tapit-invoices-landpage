@@ -92,11 +92,16 @@
   color: #fff;
 }
 
+.ti-hero-logo {
+  height: 36px;
+  margin-bottom: 16px;
+}
+
 /* Hero grid */
 .ti-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 640px) minmax(0, 520px);
-  gap: 64px;
+  grid-template-columns: minmax(0, 600px) minmax(0, 520px);
+  gap: 30px;
   align-items: center;
 }
 
@@ -106,14 +111,7 @@
 
 .ti-hero-right {
   justify-self: end;
-  padding-left: 24px;
-}
-
-@media (max-width: 900px) {
-  .ti-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+  padding-left: 48px;
 }
 
 .ti-cta-card {
@@ -149,7 +147,7 @@
   align-items: center;
   padding: 10px 12px;
   border-radius: 999px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
   background: #ffffff;
   border: 2px solid rgba(15, 23, 42, 0.12);
@@ -188,15 +186,10 @@
 
 .ti-scribble-in-card {
   position: absolute;
-  right: 18px;
-  top: 14px;
 }
 
 .ti-scribble .ti-hand {
   position: absolute;
-  right: 10px;
-  top: -6px;
-  font-size: 18px;
   transform: rotate(-3deg);
   white-space: nowrap;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7);
@@ -205,20 +198,7 @@
 .ti-scribble-arrow {
   width: 220px;
   height: 120px;
-
-  /* ponto de rotação = ponta da seta */
   transform-origin: 10% 90%;
-  transform: rotate(0deg) scaleX(0.7) scaleY(0.7);
-}
-
-.ti-scribble .ti-hand {
-  position: absolute;
-  right: 10px;
-  top: 0px;
-  font-size: 18px;
-  transform: rotate(-3deg);
-  white-space: nowrap;
-  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* Scroll button */
@@ -257,18 +237,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-}
-
-@media (max-width: 980px) {
-  .ti-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .ti-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .ti-card {
@@ -310,15 +278,6 @@
   grid-template-columns: repeat(2, minmax(0, 420px));
   gap: 16px;
   justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .ti-price-grid {
-    grid-template-columns: 1fr;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .ti-price-card {
@@ -433,6 +392,31 @@
   }
 }
 
+.ti-waitlist .ti-btn {
+  background: var(--brand3);
+  animation: waitlistPulse 2s ease-in-out infinite;
+}
+
+.ti-waitlist .ti-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  animation: waitlistPulse 2s ease-in-out infinite;
+}
+
+@keyframes waitlistPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 12px 30px rgba(52, 211, 153, 0.3),
+      0 0 0 0 rgba(52, 211, 153, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 12px 30px rgba(52, 211, 153, 0.3),
+      0 0 0 10px rgba(52, 211, 153, 0);
+  }
+}
+
 .ti-pricing-note {
   margin-top: 18px;
 }
@@ -489,4 +473,62 @@
   display: flex;
   justify-content: center;
   padding: 10px 0 18px;
+}
+
+@media (max-width: 1122px) {
+  .ti-cta-card-lg {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 980px) {
+  .ti-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .ti-band-features .ti-wrap {
+    text-align: center;
+  }
+
+  .ti-band-features .ti-h2,
+  .ti-band-features .ti-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ti-price-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ti-price-list {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .ti-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ti-hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .ti-hero-right {
+    justify-self: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .ti-grid {
+    grid-template-columns: 1fr;
+  }
 }
