@@ -14,7 +14,7 @@ export default function Waitlist() {
           onSubmit={(e) => {
             e.preventDefault();
             window.open(
-              "https://docs.google.com/forms/d/e/1FAIpQLSfwWjl5_LCPeFYaya4QNdS0N7gkuExyhsqCBiHba2YVhs767w/viewform?usp=publish-editor",
+              "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tgwfYNUMUg4TkdaVE85MDUzQ0M2QjJEOE9aMTJKUi4u",
               "_blank",
               "noopener,noreferrer",
             );
