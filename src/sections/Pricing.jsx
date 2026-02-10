@@ -1,6 +1,10 @@
 export default function Pricing() {
   return (
-    <section className="ti-band ti-band-pricing">
+    <section
+      className="ti-band ti-band-pricing ti-reveal"
+      data-ti-animate
+      style={{ "--ti-delay": "100ms" }}
+    >
       <div className="ti-wrap ti-center">
         <h2 className="ti-h2">Pricing that doesn’t waste your time.</h2>
         <p className="ti-sub ti-sub-center">

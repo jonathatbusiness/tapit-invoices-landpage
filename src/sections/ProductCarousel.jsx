@@ -9,7 +9,12 @@ const images = [
 
 export default function ProductCarousel() {
   return (
-    <section className="ti-band ti-band-carousel" id="carousel">
+    <section
+      className="ti-band ti-band-carousel ti-reveal"
+      id="carousel"
+      data-ti-animate
+      style={{ "--ti-delay": "60ms" }}
+    >
       <div className="ti-wrap ti-carousel-wrap">
         <p className="ti-carousel-top">
           Check the carousel — yes, it’s really that fast.

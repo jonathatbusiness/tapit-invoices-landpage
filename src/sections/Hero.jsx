@@ -3,7 +3,7 @@ const logo = "/assets/logo.png";
 
 export default function Hero() {
   return (
-    <section className="ti-band ti-band-hero">
+    <section className="ti-band ti-band-hero ti-reveal" data-ti-animate>
       <div className="ti-wrap ti-hero-grid">
         {/* Left */}
         <div className="ti-hero-left">
@@ -71,11 +71,29 @@ export default function Hero() {
       </div>
 
       {/* Bottom center scroll button */}
-      <a className="ti-scroll" href="#carousel" aria-label="Scroll to carousel">
+      <button
+        type="button"
+        className="ti-scroll"
+        aria-label="Scroll to carousel"
+        onClick={() => {
+          const target = document.getElementById("carousel");
+          if (!target) return;
+
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          target.classList.remove("ti-jump");
+          void target.offsetWidth;
+          target.classList.add("ti-jump");
+
+          window.setTimeout(() => {
+            target.classList.remove("ti-jump");
+          }, 900);
+        }}
+      >
         <span className="ti-scroll-pill">
           <FiArrowDown /> See it in action
         </span>
-      </a>
+      </button>
     </section>
   );
 }

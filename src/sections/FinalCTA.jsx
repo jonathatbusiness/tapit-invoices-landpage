@@ -2,7 +2,12 @@ import { FiMail } from "react-icons/fi";
 
 export default function FinalCTA() {
   return (
-    <section className="ti-band ti-band-final" id="waitlist">
+    <section
+      className="ti-band ti-band-final ti-reveal"
+      id="waitlist"
+      data-ti-animate
+      style={{ "--ti-delay": "120ms" }}
+    >
       <div className="ti-wrap ti-center">
         <h2 className="ti-h2">You made it all the way down here.</h2>
         <p className="ti-sub ti-sub-center">

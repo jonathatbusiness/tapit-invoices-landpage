@@ -25,7 +25,11 @@ const items = [
 
 export default function Features() {
   return (
-    <section className="ti-band ti-band-features">
+    <section
+      className="ti-band ti-band-features ti-reveal"
+      data-ti-animate
+      style={{ "--ti-delay": "80ms" }}
+    >
       <div className="ti-wrap">
         <h2 className="ti-h2">The “no drama” invoice workflow.</h2>
         <p className="ti-sub">
