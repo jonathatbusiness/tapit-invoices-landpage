@@ -538,23 +538,27 @@ button.ti-scroll {
 .ti-footer {
   background: var(--ink);
   color: #ffffff;
-  padding: 18px 0;
+  padding: 22px 0;
 }
 
 .ti-footer-inner {
-  display: grid;
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
 }
 
 .ti-footer-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .ti-footer-row-links {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .ti-footer-brand {
@@ -571,10 +575,117 @@ button.ti-scroll {
 }
 
 .ti-footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.92);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
   font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 120ms ease,
+    filter 120ms ease,
+    background 120ms ease;
+}
+
+.ti-footer-link:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ti-footer-link:active {
+  transform: translateY(0px);
+}
+
+/* Privacy */
+
+.ti-band-privacy .ti-h1 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.ti-band-privacy .ti-h2 {
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.ti-band-privacy .ti-sub {
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 80ch;
+}
+
+.ti-band-privacy {
+  padding: 70px 0;
+  background: var(--bg-hero);
+  min-height: 100vh;
+}
+
+.ti-privacy-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.ti-privacy-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 20, 40, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--ink);
+  transition:
+    transform 120ms ease,
+    filter 120ms ease,
+    background 120ms ease;
+}
+
+.ti-privacy-back:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.ti-privacy-card {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 34px 34px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(10, 20, 40, 0.1);
+}
+
+.ti-privacy-title {
+  margin-bottom: 10px;
+}
+
+.ti-privacy-h2 {
+  margin-top: 26px;
+  margin-bottom: 8px;
+}
+
+.ti-privacy-card .ti-sub {
+  line-height: 1.7;
+  max-width: 78ch;
+}
+
+.ti-privacy-updated {
+  margin-top: 22px;
 }
 
 @media (max-width: 1122px) {
@@ -599,17 +710,6 @@ button.ti-scroll {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @media (max-width: 560px) {
-    .ti-footer-row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .ti-footer-meta {
-      white-space: normal;
-    }
   }
 
   .ti-price-grid {
@@ -640,8 +740,23 @@ button.ti-scroll {
   }
 }
 
+@media (max-width: 640px) {
+  .ti-band-privacy {
+    padding: 54px 0;
+  }
+
+  .ti-privacy-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+}
+
 @media (max-width: 560px) {
   .ti-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ti-footer-meta {
+    white-space: normal;
   }
 }
