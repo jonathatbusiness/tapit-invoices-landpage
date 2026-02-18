@@ -1,54 +1,37 @@
-import { FiMail } from "react-icons/fi";
-
 export default function FinalCTA() {
   return (
     <section
       className="ti-band ti-band-final ti-reveal"
-      id="waitlist"
+      id="buy"
       data-ti-animate
       style={{ "--ti-delay": "120ms" }}
     >
       <div className="ti-wrap ti-center">
-        <h2 className="ti-h2">You made it all the way down here.</h2>
+        <h2 className="ti-h2">Ready to stop overthinking invoices?</h2>
         <p className="ti-sub ti-sub-center">
-          That little voice in your head already decided. Don’t leave it
-          hanging.
+          Install TapIT Invoices, generate your first invoice, and move on with
+          your day.
         </p>
 
-        <form
-          className="ti-final-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            window.open(
-              "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tgwfYNUMUg4TkdaVE85MDUzQ0M2QjJEOE9aMTJKUi4u",
-              "_blank",
-              "noopener,noreferrer",
-            );
-          }}
-        >
-          <label className="ti-field">
-            <span className="ti-field-icon">
-              <FiMail />
-            </span>
-            <input
-              type="email"
-              name="email"
-              placeholder="you@domain.com"
-              autoComplete="email"
-              required
-            />
-          </label>
-
-          <button
+        <div className="ti-final-actions">
+          <a
             className="ti-btn ti-btn-lg ti-btn-wide ti-btn-pulse"
-            type="submit"
+            href="#top"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
-            Join the waitlist
-          </button>
-        </form>
+            Get TapIT Invoices
+          </a>
+
+          <a className="ti-btn ti-btn-ghost" href="/privacy">
+            Privacy Policy
+          </a>
+        </div>
 
         <p className="ti-mini ti-mini-muted">
-          If you’re here, you already know. Let’s make invoices brain-free.
+          Chrome Web Store link will be added here soon.
         </p>
       </div>
     </section>

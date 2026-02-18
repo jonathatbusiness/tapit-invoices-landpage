@@ -6,10 +6,11 @@ import ProductCarousel from "./sections/ProductCarousel";
 import Features from "./sections/Features";
 import Pricing from "./sections/Pricing";
 import FinalCTA from "./sections/FinalCTA";
+import Privacy from "./sections/Privacy";
+import Footer from "./components/Footer";
 
 export default function App() {
   useEffect(() => {
-    // Respect user preference
     const reduce =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -40,13 +41,25 @@ export default function App() {
     return () => io.disconnect();
   }, []);
 
+  const path = window.location.pathname;
+
+  if (path === "/privacy") {
+    return (
+      <div className="ti-app" id="top">
+        <Privacy />
+        <Footer />
+      </div>
+    );
+  }
+
   return (
-    <div className="ti-app">
+    <div className="ti-app" id="top">
       <Hero />
       <ProductCarousel />
       <Features />
       <Pricing />
       <FinalCTA />
+      <Footer />
     </div>
   );
 }

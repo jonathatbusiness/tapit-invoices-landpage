@@ -25,15 +25,17 @@ export default function Hero() {
           <div className="ti-cta-card ti-cta-card-lg">
             <a
               className="ti-btn ti-btn-lg ti-btn-wide"
-              href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tgwfYNUMUg4TkdaVE85MDUzQ0M2QjJEOE9aMTJKUi4u"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#top"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
-              Join the waitlist
+              Get TapIT Invoices
             </a>
 
             <p className="ti-mini ti-mini-muted">
-              Takes 5 seconds. No spam. Your future self says thanks.
+              Chrome Web Store link will be added here soon.
             </p>
 
             <div className="ti-badges-in-card">

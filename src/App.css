@@ -534,6 +534,78 @@ button.ti-scroll {
   padding: 10px 0 18px;
 }
 
+/* Footer */
+.ti-footer {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 22px 0;
+}
+
+.ti-footer-inner {
+  display: grid;
+  gap: 10px;
+}
+
+.ti-footer-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ti-footer-brand {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.ti-footer-meta {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.ti-footer-links {
+  display: flex;
+  gap: 14px;
+}
+
+.ti-footer-link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Final CTA buttons */
+.ti-final-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.ti-btn-ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: none;
+}
+
+/* Privacy */
+.ti-band-privacy {
+  padding: 64px 0;
+  background: var(--bg-hero);
+  min-height: 100vh;
+}
+
+.ti-privacy-title {
+  margin-bottom: 10px;
+}
+
+.ti-privacy-h2 {
+  margin-top: 22px;
+}
+
 @media (max-width: 1122px) {
   .ti-cta-card-lg {
     min-height: 450px;

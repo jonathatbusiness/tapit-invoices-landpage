@@ -2,51 +2,52 @@ export default function Pricing() {
   return (
     <section
       className="ti-band ti-band-pricing ti-reveal"
+      id="pricing"
       data-ti-animate
       style={{ "--ti-delay": "100ms" }}
     >
       <div className="ti-wrap ti-center">
         <h2 className="ti-h2">Pricing that doesn’t waste your time.</h2>
         <p className="ti-sub ti-sub-center">
-          You’re here to send invoices. Not to decode pricing pages.
+          One plan. One goal: get invoices out the door.
         </p>
 
         <div className="ti-price-grid">
           <div className="ti-price-card">
-            <div className="ti-price-tag">Standard</div>
+            <div className="ti-price-tag">Free trial</div>
             <div className="ti-price">
-              <span className="ti-price-amount">$3</span>
-              <span className="ti-price-unit">/month</span>
+              <span className="ti-price-amount">$0</span>
+              <span className="ti-price-unit">/7 days</span>
             </div>
-            <div className="ti-price-note">Billed annually.</div>
+            <div className="ti-price-note">Managed by Gumroad.</div>
 
             <ul className="ti-price-list">
+              <li>Full access during the trial</li>
               <li>Unlimited invoices</li>
-              <li>Local-first (no cloud required)</li>
-              <li>One-click PDF</li>
-              <li>Themes included</li>
+              <li>Local-first (no account)</li>
+              <li>Cancel anytime</li>
             </ul>
           </div>
 
           <div className="ti-price-card ti-price-card-highlight">
-            <div className="ti-price-tag">Waitlist deal</div>
+            <div className="ti-price-tag">Yearly</div>
             <div className="ti-price">
-              <span className="ti-price-amount">$2</span>
-              <span className="ti-price-unit">/month</span>
+              <span className="ti-price-amount">$36</span>
+              <span className="ti-price-unit">/year</span>
             </div>
-            <div className="ti-price-note">Billed annually.</div>
+            <div className="ti-price-note">Renews yearly. Cancel anytime.</div>
 
             <ul className="ti-price-list">
               <li>Unlimited invoices</li>
-              <li>Local-first</li>
-              <li>One-click PDF</li>
-              <li>Locked-in early price</li>
+              <li>One-click PDF export</li>
+              <li>Built-in email template</li>
+              <li>Multiple themes</li>
             </ul>
           </div>
         </div>
 
         <p className="ti-mini ti-mini-muted ti-pricing-note">
-          Yes, it’s simple. That’s the point. Now go ship the invoice.
+          No upsells. No tiers. Just invoices.
         </p>
       </div>
     </section>
