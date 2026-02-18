@@ -24,10 +24,6 @@ export default function FinalCTA() {
           >
             Get TapIT Invoices
           </a>
-
-          <a className="ti-btn ti-btn-ghost" href="/privacy">
-            Privacy Policy
-          </a>
         </div>
 
         <p className="ti-mini ti-mini-muted">
