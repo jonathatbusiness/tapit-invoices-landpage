@@ -16,19 +16,15 @@ export default function FinalCTA() {
         <div className="ti-final-actions">
           <a
             className="ti-btn ti-btn-lg ti-btn-wide ti-btn-pulse"
-            href="#top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
+            href="https://chromewebstore.google.com/detail/tapit-invoices/ilhailhnogpmmmhhcfmhgmfdignhboph"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Get TapIT Invoices
           </a>
         </div>
 
-        <p className="ti-mini ti-mini-muted">
-          Chrome Web Store link will be added here soon.
-        </p>
+        <p className="ti-mini ti-mini-muted">Free on the Chrome Web Store</p>
       </div>
     </section>
   );

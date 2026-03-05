@@ -25,17 +25,15 @@ export default function Hero() {
           <div className="ti-cta-card ti-cta-card-lg">
             <a
               className="ti-btn ti-btn-lg ti-btn-wide"
-              href="#top"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              href="https://chromewebstore.google.com/detail/tapit-invoices/ilhailhnogpmmmhhcfmhgmfdignhboph"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Get TapIT Invoices
             </a>
 
             <p className="ti-mini ti-mini-muted">
-              Chrome Web Store link will be added here soon.
+              Free on the Chrome Web Store
             </p>
 
             <div className="ti-badges-in-card">

@@ -36,8 +36,10 @@
 
     <meta
       name="description"
-      content="TapIT Invoices is a lightweight Chrome extension to create clean, professional invoices in seconds. No login. No tracking. Just invoices."
+      content="TapIT Invoices is a free Chrome extension to create professional invoices in seconds — locally, with no login or account required. One-click PDF export."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tapit-invoices.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -47,9 +49,12 @@
     />
     <meta
       property="og:description"
-      content="Create clean, professional invoices in seconds with a lightweight Chrome extension. No login. No BS."
+      content="Create professional invoices in seconds with a free Chrome extension. No login. No cloud. Just open and send."
     />
-    <meta property="og:image" content="/assets/og-preview.png" />
+    <meta
+      property="og:image"
+      content="https://tapit-invoices.com/assets/og-preview.png"
+    />
     <meta property="og:url" content="https://tapit-invoices.com" />
 
     <!-- Twitter -->
@@ -60,9 +65,30 @@
     />
     <meta
       name="twitter:description"
-      content="Create clean, professional invoices in seconds. No login. No tracking."
+      content="Free Chrome extension. Create professional invoices locally in seconds. No login. No tracking."
     />
-    <meta name="twitter:image" content="/assets/og-preview.png" />
+    <meta
+      name="twitter:image"
+      content="https://tapit-invoices.com/assets/og-preview.png"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TapIT Invoices",
+        "operatingSystem": "Chrome",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "A free Chrome extension to create clean, professional invoices locally in seconds. No login required.",
+        "url": "https://chromewebstore.google.com/detail/tapit-invoices/ilhailhnogpmmmhhcfmhgmfdignhboph"
+      }
+    </script>
 
     <title>TapIT Invoices – Simple invoices, done fast</title>
   </head>
